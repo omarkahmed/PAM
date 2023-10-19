@@ -398,27 +398,27 @@ void pamc_debug_chk(const VariableSetBase<T> &varset, int id,
 
           if (isnan(temp2) || isnan(qv2) || isnan(ql2) || isnan(qi2) ||
               isnan(qd2) || temp2 < 0 || entr2 < 0) {
-            printf(
+            PRINTF(
                 "pamc_debug_chk - id:%d k:%d j:%d i:%d n:%d en_var :: %g  =>  "
                 "%g \n",
                 id, k, j, i, n, entr1, entr2);
-            printf(
+            PRINTF(
                 "pamc_debug_chk - id:%d k:%d j:%d i:%d n:%d temp   :: %g  =>  "
                 "%g \n",
                 id, k, j, i, n, temp1, temp2);
-            printf(
+            PRINTF(
                 "pamc_debug_chk - id:%d k:%d j:%d i:%d n:%d qd     :: %g  =>  "
                 "%g \n",
                 id, k, j, i, n, qd1, qd2);
-            printf(
+            PRINTF(
                 "pamc_debug_chk - id:%d k:%d j:%d i:%d n:%d qv     :: %g  =>  "
                 "%g \n",
                 id, k, j, i, n, qv1, qv2);
-            printf(
+            PRINTF(
                 "pamc_debug_chk - id:%d k:%d j:%d i:%d n:%d ql     :: %g  =>  "
                 "%g \n",
                 id, k, j, i, n, ql1, ql2);
-            printf(
+            PRINTF(
                 "pamc_debug_chk - id:%d k:%d j:%d i:%d n:%d qi     :: %g  =>  "
                 "%g \n",
                 id, k, j, i, n, qi1, qi2);
