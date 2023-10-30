@@ -23,6 +23,9 @@ export GATOR_DISABLE=0
 export ZE_AFFINITY_MASK=0.0
 export SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
 
+export PATH=/hpc-wl-automation/e3sm/libs/ubuntu-22.04/oneapi-pnetcdf-ifx_mpich/20231018/bin:$PATH
+export LD_LIBRARY_PATH=/hpc-wl-automation/e3sm/libs/ubuntu-22.04/oneapi-pnetcdf-ifx_mpich/20231018/lib:$PATH
+
 export YAKL_SYCL_FLAGS="-DYAKL_PROFILE -DHAVE_MPI -O3 -fsycl -sycl-std=2020 -fsycl-unnamed-lambda -fsycl-device-code-split=per_kernel -fsycl-targets=spir64_gen -Xsycl-target-backend \"-device 12.60.7 -options -ze-opt-large-register-file\" -mlong-double-64 -Xclang -mlong-double-64 -I`nc-config --includedir`"
 export YAKL_F90_FLAGS="-O2 -DSCREAM_DOUBLE_PRECISION"
 export PAM_LINK_FLAGS="-L`nc-config --libdir` -lnetcdf"
