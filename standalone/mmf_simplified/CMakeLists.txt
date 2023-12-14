@@ -24,7 +24,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../physics  physics )
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../dynamics dynamics)
 
 add_executable(driver driver.cpp supercell_init.cpp supercell_init.F90)
-add_executable(fortran_test fortran_test.F90)
+#add_executable(fortran_test fortran_test.F90)
 
 target_compile_definitions(driver PUBLIC -DPAM_NLEV=${PAM_NLEV})
 
@@ -42,5 +42,5 @@ else()
   target_link_libraries(driver dynamics physics pam_core yaml-cpp ${PAM_LINK_FLAGS})
 endif()
 
-target_link_libraries(fortran_test dynamics physics pam_core ${PAM_LINK_FLAGS} ${YAKL_FORTRAN_INTERFACE_TARGET})
+#target_link_libraries(fortran_test dynamics physics pam_core ${PAM_LINK_FLAGS} ${YAKL_FORTRAN_INTERFACE_TARGET})
 

@@ -332,3 +332,14 @@ template <class T> inline void debug_print_val( T var , char const * file , int 
 #define DEBUG_PRINT_MAX(var) { debug_print_max((var),__FILE__,__LINE__,#var); }
 #define DEBUG_PRINT_VAL(var) { debug_print_val((var),__FILE__,__LINE__,#var); }
 
+#if defined(__SYCL_DEVICE_ONLY__)
+#define PRINTF(format, ...)                                       \
+  do {                                                            \
+    const __attribute__((opencl_constant)) char fmt[] = (format); \
+    sycl::ext::oneapi::experimental::printf(fmt, ##__VA_ARGS__);  \
+  } while (0)
+#else
+  #define PRINTF(format, ...)                                     \
+    printf(format, ##__VA_ARGS__);
+#endif
+
