@@ -8,6 +8,8 @@ fi
 
 cmake      \
   -DYAKL_ARCH="${YAKL_ARCH}"                                      \
+  -DKokkos_ARCH_AMPERE80="${Kokkos_ARCH_AMPERE80}"                \
+  -DKokkos_ARCH_HOPPER90="${Kokkos_ARCH_HOPPER90}"                \
   -DYAKL_HOME="${YAKL_HOME}"                                      \
   -DSCREAM_HOME="${SCREAM_HOME}"                                  \
   -DSCREAM_DOUBLE_PRECISION=ON                                    \
